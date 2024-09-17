@@ -11,7 +11,7 @@ import {
 import { useForm, UseFormReturnType } from "@mantine/form";
 import { upperFirst } from "@mantine/hooks";
 import { QBehaviorAnalysisForm } from "../../form/farmBehaviourQuality";
-import { legendStyle, textSpacing } from "../../app/styles";
+import { legendStyle, mainContainer, textSpacing } from "../../app/styles";
 //
 // TODO: Har lagt til sliders, vet ikke om det er riktig
 const SLIDERS = [
@@ -41,34 +41,9 @@ interface Props {
   form: UseFormReturnType<QBehaviorAnalysisForm>;
 }
 
-export default function QBehaviorAnalysis() {
-  const form = useForm({
-    mode: "uncontrolled",
-    initialValues: {
-      active: 0,
-      relaxed: 0,
-      fearful: 0,
-      agitated: 0,
-      calm: 0,
-      content: 0,
-      inDifferent: 0,
-      frustrated: 0,
-      friendly: 0,
-      bored: 0,
-      playful: 0,
-      positivelyOccupied: 0,
-      lively: 0,
-      inquisitive: 0,
-      irritable: 0,
-      calmlessUneasy: 0,
-      sociable: 0,
-      apathetic: 0,
-      happy: 0,
-      distressed: 0,
-    },
-  });
+export default function QBehaviorAnalysis({ form }: Props) {
   return (
-    <Container style={{ display: "flex", flexdirection: "column" }}>
+    <Container {...mainContainer} style={{ flexdirection: "column" }}>
       <Fieldset
         {...textSpacing}
         legend={<Text style={legendStyle}>Qualitative Behaviour Analysis</Text>}
