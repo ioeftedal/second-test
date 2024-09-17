@@ -10,22 +10,7 @@ interface Props {
   form: UseFormReturnType<AvoidanceDistanceTestForm>;
 }
 
-export default function AvoidanceDistanceTestingComponent() {
-  const form = useForm({
-    mode: "uncontrolled",
-    initialValues: {
-      id: "",
-      groupName: "",
-      earTag: "",
-      side: "",
-      aDT1: 0,
-      aDT2: 0,
-      nasalDischarge: "",
-      ocularDischarge: "",
-      comment: "",
-    },
-  });
-
+export default function AvoidanceDistanceTestingComponent({ form }: Props) {
   return (
     <Container {...mainContainer} mt="xl">
       <Fieldset

@@ -2,10 +2,21 @@ export const header = {
   bg: "var(--mantine-color-blue-light)",
 };
 
+export const footer = {
+  position: "fixed",
+  bottom: 0,
+  bg: "var(--mantine-color-blue-light)",
+  h: 200,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+};
+
 export const testIcon = {};
 
 export const mainContainer = {
   display: "flex",
+  mt: "xl",
 };
 
 export const testContainer = {

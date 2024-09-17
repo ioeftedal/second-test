@@ -289,3 +289,14 @@ model WaterPoint {
   farmId               String @db.Uuid
   Farm                 Farm   @relation(fields: [farmId], references: [id])
 }
+
+model TestWaterPoint {
+  id                   Int    @id @default(autoincrement())
+  group_name           String
+  nr_animals_using_wps Int?
+  type                 Int
+  troughlength         Int?
+  cleanliness          Int
+  functioning          String
+  waterflow            String
+}
